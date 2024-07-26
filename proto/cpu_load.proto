@@ -1,0 +1,12 @@
+//指定protobuf的语法版本
+syntax = "proto3";
+
+//利用package声明当前.proto文件中数据的作用域，经编译后就是C++中的命名空间
+package monitor.proto;
+
+//利用message关键字定义类
+message CpuLoad {
+    float load_avg_1 = 1;
+    float load_avg_3 = 2;
+    float load_avg_15 = 3;
+  }
